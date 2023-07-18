@@ -1,0 +1,117 @@
+<html>
+    <head><title>Cour Api</title></head>
+    <body>v1.0.0 --- 18.07.2023
+        <div>
+
+            <h1>
+                kullanıcı kayıt
+            </h1>
+            <div>
+                <h3> Servis :  (POST) http://localhost:8080/api/user</h3>
+                <h4> Body :  {
+                    "username" : "admin",
+                    "password" : "admin1234"
+                }  </h4>
+                <h4> çıktı : {
+                    "response": {
+                        "userId": "e4d44254-9737-4861-a61b-f176c118cd51",
+                        "username": "admin",
+                        "password": "admin1234",
+                        "_id": "64b66af2090872a09df6ecdc",
+                        "__v": 0
+                    }
+                }  </h4>
+            </div>       
+        </div>
+
+        <div>
+
+            <h1>
+                login
+            </h1>
+            <div>
+                <h3> Servis :  (GET) http://localhost:8080/api/user</h3>
+                <h4> Body :  {
+                    "username" : "admin",
+                    "password" : "admin1234"
+                }  </h4>
+                <h4> çıktı : {
+                    "_id": "64b66af2090872a09df6ecdc",
+                    "userId": "e4d44254-9737-4861-a61b-f176c118cd51",
+                    "username": "admin",
+                    "password": "admin1234",
+                    "__v": 0
+                }  </h4>
+            </div>       
+        </div>
+
+
+        <div>
+
+            <h1>
+                kurs ekleme
+            </h1>
+            <div>
+                <h3> Servis :  (POST) http://localhost:8080/api/cour</h3>
+                <h4> Body : {
+                    "name" : "matematik",
+                    "description" : "harika bir matematik kılası",
+                    "date" : "2023-07-18",
+                    "start" : "13.00",
+                    "end" : "18:00",
+                    "image" : ""
+                }  </h4>
+                <h4> çıktı : {
+                    "response": {
+                        "courId": "bfa5870f-7677-4b16-979c-c78df74e4594",
+                        "description": "harika bir matematik kılası",
+                        "name": "matematik",
+                        "date": "2023-07-18T00:00:00.000Z",
+                        "start": "13.00",
+                        "end": "18:00",
+                        "image": "",
+                        "_id": "64b672795cd28ce7a40a415a",
+                        "__v": 0
+                    }
+                } </h4>
+            </div>       
+        </div>
+
+
+        <div>
+
+            <h1>
+                kurs listeleme & tarih ile filtreleme 
+            </h1>
+            <div>
+                <h3> Servis :  (GET) http://localhost:8080/api/cour && http://localhost:8080/api/cour?startDate=2023-07-18&endDate=2023-07-30</h3>
+                <h4> Body YOK </h4>
+                <h4> çıktı : [
+                    {
+                        "_id": "64b672795cd28ce7a40a415a",
+                        "courId": "bfa5870f-7677-4b16-979c-c78df74e4594",
+                        "description": "harika bir matematik kılası",
+                        "name": "matematik",
+                        "date": "2023-07-18T00:00:00.000Z",
+                        "start": "13.00",
+                        "end": "18:00",
+                        "image": "",
+                        "__v": 0
+                    },
+                    {
+                        "_id": "64b67c6199a41e0bdea83598",
+                        "courId": "788411a0-476e-431e-bc87-ea425a06d4d7",
+                        "description": "harika bir türkçe kılası",
+                        "name": "türkçe",
+                        "date": "2023-07-25T00:00:00.000Z",
+                        "start": "13.00",
+                        "end": "18:00",
+                        "image": "",
+                        "__v": 0
+                    }
+                ] </h4>
+            </div>       
+        </div>
+
+    </body>
+</html>
